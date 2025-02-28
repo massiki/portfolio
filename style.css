@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", serif;
+  font-optical-sizing: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  height: 80px;
+  box-shadow: 0 5px 80px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 85px;
+  background-color: white;
+  z-index: 1;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo img,
+footer .top .logo img {
+  width: 60px;
+}
+
+nav .logo a,
+footer .top .logo a {
+  margin-left: 8px;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+nav ul {
+  display: flex;
+  gap: 40px;
+}
+
+nav ul li,
+footer .top ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: black;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #5e3bee;
+}
+
+nav.open .logo {
+  display: none;
+}
+
+nav.open ul {
+  display: flex;
+}
+
+nav #contact,
+nav #menuButton {
+  color: #1c1e53;
+  background: transparent;
+  padding: 12px 24px;
+  border: 1px solid #1c1e53;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+nav #menuButton {
+  display: none;
+  justify-content: center;
+  padding: 7px;
+  font-size: 24px;
+}
+
+nav #contact:hover,
+nav #menuButton:hover {
+  color: white;
+  background-color: #5e3bee;
+  background: #5e3bee;
+}
+
+.main {
+  background-color: #deebee;
+  padding: 90px 85px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.main .right img {
+  width: 500px;
+  border-bottom: 4px solid #5e3bee;
+  border-radius: 5px;
+}
+
+.main .left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.main .left h5,
+.skill h5,
+.about .right h5,
+.portfolio h5 {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.main .left h3,
+.skill h3,
+.about .right h3,
+.portfolio h3 {
+  margin-top: 10px;
+  font-size: 48px;
+}
+
+.main .left h3 span {
+  color: #5e3bee;
+}
+
+.main .left p {
+  color: #1c1e53;
+  font-size: 22px;
+  margin-top: 20px;
+  line-height: 35px;
+}
+
+.skill {
+  padding: 90px 85px;
+}
+
+.skill .skill-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.skill .skill-item .item {
+  flex: 1;
+  border-bottom: 1px solid transparent;
+  padding: 40px;
+  border-radius: 5px;
+  background-color: #deebee;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.skill .skill-item .item:hover {
+  border-bottom: 4px solid #5e3bee;
+}
+
+.skill .skill-item .item div i {
+  font-size: 30px;
+  padding: 8px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.skill .skill-item .item h4 {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.skill .skill-item .item p {
+  margin-top: 10px;
+  font-size: 17px;
+}
+
+.about {
+  padding: 90px 85px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.about .left {
+  border-bottom: 4px solid #5e3bee;
+  border-radius: 5px;
+  box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about .left img {
+  width: 500px;
+  display: block;
+  border-radius: 4px;
+}
+
+.about .right p {
+  color: #1c1e53;
+  font-size: 22px;
+  margin-top: 20px;
+  line-height: 35px;
+}
+
+.portfolio {
+  background-color: #deebee;
+  padding: 90px 85px;
+}
+
+.portfolio .portfolio-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.portfolio .portfolio-item .item {
+  flex: 1;
+  border-bottom: 4px solid transparent;
+  border-radius: 5px;
+  background-color: #deebee;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.portfolio .portfolio-item .item:hover {
+  border-bottom: 4px solid #5e3bee;
+}
+
+.portfolio .portfolio-item .item img {
+  width: 100%;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.portfolio .portfolio-item .item img:hover {
+  transform: scale(1.1);
+}
+
+.portfolio .portfolio-item .item div {
+  padding: 30px;
+}
+
+.portfolio .portfolio-item .item div h4 {
+  font-size: 20px;
+}
+
+.portfolio .portfolio-item .item div p {
+  margin-top: 10px;
+}
+
+.cta {
+  padding: 90px 85px;
+}
+
+.cta .cta-items {
+  background-color: #deebee;
+  padding: 40px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cta .cta-items a {
+  color: white;
+  background: #5e3bee;
+  padding: 12px 24px;
+  border: 1px solid #1c1e53;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.cta .cta-items a:hover {
+  color: white;
+  background-color: #3415ae;
+}
+
+.cta .cta-items footer {
+  padding: 90px 85px;
+}
+
+.cta .cta-items h4 {
+  font-size: 20px;
+}
+
+footer {
+  background-color: #deebee;
+  padding: 90px 85px;
+}
+
+footer .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .top .logo {
+  display: flex;
+  align-items: center;
+}
+
+footer .top ul {
+  display: flex;
+  gap: 40px;
+}
+
+footer .top ul li a {
+  text-decoration: none;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: black;
+  transition: all 0.3s ease;
+}
+
+footer .top ul li a:hover {
+  color: #5e3bee;
+}
+
+footer .sosial-links a {
+  font-size: 30px;
+  margin-left: 10px;
+  color: black;
+}
+
+footer .separator {
+  width: 100%;
+  height: 2px;
+  background-color: #1c1e53;
+  margin: 10px 0;
+}
+
+footer .bottom {
+  text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+
+  nav ul,
+  footer .top ul {
+    gap: 20px;
+  }
+
+  .main .left h3,
+  .skill h3,
+  .about .right h3,
+  .portfolio h3 {
+    font-size: 45px;
+  }
+
+  .main .left h5,
+  .skill h5,
+  .about .right h5,
+  .portfolio h5 {
+    font-size: 28px;
+  }
+
+  .main .left p {
+    font-size: 18px;
+  }
+
+  .main .right img,
+  .about .left img {
+    width: 400px;
+  }
+
+  .skill .skill-item {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .skill .skill-item .item {
+    flex: 0 0 calc(50% - 10px);
+    margin: 0;
+  }
+
+  .about .right p {
+    font-size: 18px;
+  }
+
+  .portfolio .portfolio-item {
+    gap: 20px;
+  }
+
+  .cta .cta-items {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+
+  nav ul,
+  nav #contact,
+  footer .top ul {
+    display: none;
+  }
+
+  nav #menuButton {
+    display: flex;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+  .main .right img {
+    width: 100%;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .main .left p,
+  .about .right p {
+    line-height: 30px;
+  }
+
+  .cta .cta-items h4 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .skill .skill-item,
+  .portfolio .portfolio-item,
+  footer .top {
+    flex-direction: column;
+  }
+
+  footer .top {
+    gap: 14px;
+    align-items: start;
+  }
+
+
+}
+
+@media screen and (max-width: 576px) {
+  nav {
+    padding: 0 12px;
+  }
+
+  nav ul {
+    gap: 10px;
+  }
+
+  .skill .skill-item,
+  .portfolio .portfolio-item {
+    gap: 12px;
+  }
+
+  .skill .skill-item .item,
+  .portfolio .portfolio-item .item div {
+    padding: 20px;
+  }
+
+  .main,
+  .skill,
+  .about,
+  .portfolio,
+  .cta,
+  footer {
+    padding: 90px 12px;
+  }
+
+  .about .left img {
+    width: 100%;
+  }
+}
